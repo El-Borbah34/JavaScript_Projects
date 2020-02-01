@@ -8,8 +8,17 @@ function displayDate()  {
     
 }
 
+/*Both the ABOVE and BELOW are calling of functions. the getidby is the confusing part */
 function moreWords()    {
     var letters = "This is kinda confusing";
     letters += " and I am taking along time to understand it";
     document.getElementById("connected").innerHTML = letters;
 }
+moreWords()             /*Need to Call the FUNCTION INTO EXISTENCE in JAVASCRIPT!!*/ 
+
+
+function toCelsius(f)   {
+    return(5/9) * (f-32);
+}
+document.getElementById("temp").innerHTML = toCelsius(76)
+/*learned that i need to check developer tools under CONSOLE to figure out my problems with JAVASCRIPT.*/
