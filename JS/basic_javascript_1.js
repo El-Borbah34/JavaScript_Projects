@@ -27,4 +27,8 @@ var members = members.fontcolor("green");
 
 document.write(members);
 
+function displayDate()  {
+    document.getElementById("demo").innerHTML = Date();/* Special */ 
+    
+}
 
