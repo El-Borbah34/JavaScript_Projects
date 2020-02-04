@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./CSS/basic_css.css">
+    </head>
+    <body>
+<!--------------------ALL JAVASCRIPT------------------>       
+        <p>How many seconds would you like to set your alarm for?</p>
+       <input id= "seconds" value="">
+       <button onclick="countdown()">CLICK HERE DOG.</button>
+       <p id="timer"></p>
+<!-----------------------SLIDE SHOW------------------->
+        <div class="slide_container">
+            
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.hellogiggles.com%2Fuploads%2F2018%2F01%2F05075325%2Fbrendie-e1515196414108.jpg&w=400&c=sc&poi=face&q=85" alt="image_1" style="width: 100%;">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://cdn.iwastesomuchtime.com/52e1595e-b09b-464f-95e7-b831141ed308.jpeg" alt="image_2" style="width: 100%;">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://i.dailymail.co.uk/1s/2019/02/18/21/9970734-6718439-image-a-10_1550525161005.jpg" alt="image_3" style="width: 100%;">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+        </div>
+        <br>
+
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+
+
+        <script src="./JS/basic_javascript_9.js"></script>
+    </body>
+</html>
