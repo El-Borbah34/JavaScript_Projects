@@ -50,9 +50,9 @@ function foodConsume()  {
 function count_Function()   {
     document.getElementById("counting").innerHTML = count();
     function count()    {
-        var starting_point = 9;
+        var starting_point = 1;
         function plus_One() {
-            starting_point += 4;
+            starting_point += 1;
         }
         plus_One();
         return starting_point;
