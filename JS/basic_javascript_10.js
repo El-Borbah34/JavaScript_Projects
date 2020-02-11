@@ -66,7 +66,7 @@ function change()   {
     let car = {make: "Fred Flintstones car", model: "Foot Powered", year:"20 B.C.", color: "gun metal"};
     document.getElementById("freds_car").innerHTML = car.make + car.model;
 };
-change();
+change(); // this will run the function. 
 
 function break_continue()   {
     var countdown = ""
