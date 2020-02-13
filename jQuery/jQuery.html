@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+          
+
+
+        <script>
+            $(document).ready(function()    {
+                $("html").append(
+                    "<body>\
+                        <div id='container'>\
+                            <div id='inner'>\
+                                <h1>Basic jQuery</h1>\
+                                <p id = '1'>Paragraph 1</p>\
+                                <p id = '2'>Paragraph 2</p>\
+                                <p id = '3'>Paragraph 3</p>\
+                                <p id = '4'>POOP POO DOO DOO BUTT</p>\
+                            </div>\
+                        </div>\
+                    </body>"
+                );
+                $("#4").mouseenter(function()   {
+                    alert('congrats you just pooped your undies, go tell Rick what happened');
+                });
+
+                $("#2").css({"color":"red"});
+                
+                $("h1").click(function()    {
+                    $('#1').fadeToggle(4000);
+                });
+                
+                $("#3").click(function()    {
+                    $('h1').hide();
+                });
+            });
+        </script>
+    </body>
+</html>
