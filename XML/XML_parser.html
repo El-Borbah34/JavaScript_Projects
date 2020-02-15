@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p id="XML_example"></p>
+        <script>
+            var xml_parse, xml_document;
+
+            //creates a text string
+            var bamboo = "<cat>" + 
+            "<name>Bamboo Stinky Cat</name>" + 
+            "<hair>Fluffy Hair</hair>" +
+            "<age>7</age>" +
+            "<food>Tuna Please</food>" +
+            "</cat>";
+
+            //creates an XML DOM parser
+            xml_parse = new DOMParser();
+
+            //creates a new XML DOM object using the text string
+            xml_document = xml_parse.parseFromString(bamboo, "text/xml");
+            
+            document.getElementById("XML_example").innerHTML = 
+            xml_document.getElementsByTagName("hair")[0].childNodes[0].nodeValue;
+        </script>
+    </body>
+</html>
