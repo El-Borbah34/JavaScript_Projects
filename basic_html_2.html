@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="CSS/basic_css_2.css">
     </head>
     <body>
-        <div>
-            <p>
-                Click the button to display the date.
+        <script>document.body.className += 'fade-out'</script>
+        <div id="section1">
+            <p style="font-size: 5vw;">
+               <a href="#section2">Click the button to display the date and to go down the page.</a> 
             </p>
                 <div>
                     <button onclick="displayDate()">This is the time!</button>
@@ -16,7 +19,7 @@
         <p id="connected"></p> <!--Had to add text for the change to take place, but how come JavaScript didnt print it out?--> 
         
         <p>This fucntion converts Fahrenheit to Celsius:</p>
-        <p id="temp"></p> 
-    </body>
+        <p id="temp"></p> <br><br><br>
+
     <script src="./JS/basic_javascript_2.js"></script>
 </html>

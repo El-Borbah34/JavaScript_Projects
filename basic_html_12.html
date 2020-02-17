@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="CSS/basic_css_2.css">
+    </head>
+    <body>
+        <script>document.body.className += 'fade-out'</script>
+        <div id="section1">
+            <p style="font-size: 5vw;">
+               <a href="#section2">Click the button to display the date and to go down the page.</a> 
+            </p>
+                <div>
+                    <button onclick="displayDate()">This is the time!</button>
+                    <p id="time"></p>
+                </div>
+        </div>
+        <p id="connected"></p> <!--Had to add text for the change to take place, but how come JavaScript didnt print it out?--> 
+        
+        <p>This fucntion converts Fahrenheit to Celsius:</p>
+        <p id="temp"></p> <br><br><br>
+<!---------------------------------FORM-------------------------------->        
+        <form name="theForm" action="" onsubmit="return validateForm()" method="post">
+            <label for="wholeName">Full Name:</label><br>
+            <input type="text" id="wholeName" name="wholeName" value=""><br>
+            <label for="phoneNumber">Phone Number:</label><br>
+            <input type="text" id="phoneNumber" name="phoneNumber" value=""><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <br><br><br><br>
+<!----------------------------------Popup---------------------------------->
+        <button class="open-button" onclick="openForm()">This is my Form</button>
+
+        <div class="form-popup" id="myForm">
+            <form action="" class="form-container">
+                <h1>My First Popup</h1>
+                <label for="pierson">How awesome is Pierson?</label>
+                <input type="text" placeholder="Please describe how much you love Pierson" name="ourBoy" required>
+
+                <label for="pierson2">Describe more about that awesome guy.</label>
+                <input type="text" placeholder="Come on theres alot more you wanna say." name="ourBoy2" required>
+
+                <button type="submit" class="btn">Tell Us!</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+
+        </div>
+<!--------------------------Image------------------------------------>        
+        <div id="photoContainer">
+            <input type="checkbox" id="zoomIn">
+            <label for="zoomIn">
+                <img src="img/dmljqx6sh1321.jpg" alt="thisFuck" id="animateThing">
+                <a href="#section1">Click this to go up the page</a>
+                <div id="section2"></div>
+            </label> 
+        </div>
+        
+
+    </body>
+    <script src="./JS/basic_javascript_2.js"></script>
+</html>

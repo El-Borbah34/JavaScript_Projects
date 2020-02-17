@@ -22,3 +22,23 @@ function toCelsius(f)   {
 }
 document.getElementById("temp").innerHTML = toCelsius(76)
 /*learned that i need to check developer tools under CONSOLE to figure out my problems with JAVASCRIPT.*/
+
+$(function()    {
+    $('body').removeClass('fade-out');
+});
+
+function validateForm() {
+    var x = document.forms["theForm"]["phoneNumber"].value;
+    if (x == "")    {
+        alert("Phone Number must be filled out");
+        return false;
+    }
+}
+
+function openForm()     {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm()    {
+    document.getElementById("myForm").style.display = "none";
+}

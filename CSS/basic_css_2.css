@@ -1,0 +1,103 @@
+html    {
+    scroll-behavior: smooth;
+}
+
+*   {
+    box-sizing: border-box;
+}
+body    {
+    opacity: 1;
+    transition: 5s opacity;
+}
+
+body.fade-out   {
+    opacity: 0;
+    transition: none;
+}
+
+.open-button    {
+    background-color: rgb(5, 197, 133);
+    color: brown;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+.form-popup {
+    background-color: yellow;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.form-container input[type=text]    {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background-color: violet;
+}
+
+.form-container input[type=text]:focus  {
+    background-color: tomato;
+    outline: yellow;
+}
+
+.form-container .btn    {
+    background-color: cornflowerblue;
+    color: crimson;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: .8;
+}
+
+.form-container .cancel {
+    background-color: darkblue;
+}
+
+.form-container .btn:hover, .open-button:hover  {
+    opacity: 1;
+}
+
+#animateThing   {
+    max-height: 300px;
+    max-width: 150px;
+    position: relative;
+    animation: myMovement 15s infinite;
+}
+
+@keyframes myMovement   {
+    from {left: 0px;}
+    to {left: 1300px;}
+}
+
+input[type=checkbox]    {
+    display: none;
+}
+
+#photoContainer img {
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+}
+
+input[type=checkbox]:checked ~ label > img  {
+    transform: scale(2);
+    cursor: zoom-out;
+}
