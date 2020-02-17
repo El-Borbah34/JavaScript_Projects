@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    
+    <!---HEAD---->
+    <head>
+        <meta charset="utf-8">
+        <title>Pierson Andrew Han</title>
+        <link rel="stylesheet" href="weebsite_css.css">
+        <script src="weebsite_javascript.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    
+<!-------BODY------->
+    <body class="background">
+    <script>
+        document.body.className += ' fade-out';
+            $(function()    {
+                $('body').removeClass('fade-out');
+            }
+        );
+    </script>
+
+<!---------NAV------->
+        <div class="navbar">
+            <a class="active" href="#home">HOME</a>
+            <a href="#slideshow">SLIDESHOW</a> <!---NEW-->
+            <a href="#about">ABOUT</a>
+            <a href="#github">GITHUB</a>
+            <a onclick="openForm()">CONTACT</a><!---NEW-->
+        </div>
+
+    <div class="btn cancel" onclick="closeForm()"></div>
+
+<!--------HOME-------->
+        <div id="home">    
+            <br>
+            <br>
+
+<!------------VIDEO--------->
+            <video autoplay muted loop id="typing_video">
+                <source src="./IMG/Videos/lame_dude_typing.mp4" type="video/mp4">
+                Your browser doesn't support HTML5 video.
+            </video>
+        </div>
+
+<!---------VIDEO TEXT-------->
+        <div class="video_text">
+            <h1 style="color: white;">Pierson Han's Portfolio</h1>
+                <p>
+                    <strong>
+                        <center>
+                            <q>
+                                The computer programmer is a creator of the universes, for which he alone is the lawgiver.
+                                <br>
+                                No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
+                                <br>
+                                field of battle and to command such unswervingly dutiful actors or troops.
+                            </q>
+                                <br>- Joseph Weizenbaum <br>
+                                <br>
+                                My name is Pierson Han. Welcome to my portfolio website. On it, I will tell you about my background and experience.<br>
+                            <br>
+                                Thank you for stopping by and hope you enjoy!
+                        </center>
+                    </strong>
+                </p>
+        </div>
+
+<!------------------------SLIDESHOW---------------------------->        
+        <div id="slideshow">
+            <div id="slide_background">
+                <div id="slideshow_container">
+
+                    <div class="mySlides fade">
+                        <div class="slide_number">1/6</div>
+                            <img class="slide_show_images" src="IMG/MVIMG_20181201_190748.jpg" style="width: 100%;" alt="">
+                                <div class="text">I am ready to assist you on your projects!</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="slide_number">2/6</div>
+                            <img class="slide_show_images" src="IMG/javascript_css_html.png" style="width: 100%;" alt="">
+                                <div class="text">I am a full-stack developer,<br> trained in:<br> HTML, CSS, JavaScript,</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="slide_number">3/6</div>
+                            <img class="slide_show_images" src="IMG/csharp-e7b8fcd4ce.png" style="width: 100%;" alt="">
+                                <div class="text">the popular programming language C#,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="slide_number">4/6</div>
+                            <img class="slide_show_images" src="IMG/python.png" style="width: 100%;" alt="">
+                                <div class="text">Python, .NET Framework, ASP.NET, MVC,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="slide_number">5/6</div>
+                            <img class="slide_show_images" src="IMG/database.png" style="width: 100%;" alt="">
+                                <div class="text">back end development, databases and SQL.</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="slide_number">6/6</div>
+                            <img class="slide_show_images" src="IMG/imageproxy.gif" style="width: 100%;" alt="">
+                                <div class="text">
+                                    <a onclick="openForm()" href="#contact" style="color: white;">Contact me Now!</a>
+                                </div>
+                    </div>
+
+                    <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+            <br>
+
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+                showSlides(slideIndex);
+            function plusSlides(n)  {
+                showSlides(slideIndex += n);
+            }
+            function currentSlide(n)    {
+                showSlides(slideIndex = n);
+            }
+            function showSlides(n)  {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length)  {slideIndex = 1}
+                    if (n < 1)  {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++)   {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+<!----------ABOUT SECTION--------->
+        <div class="row" id="about">
+            <div class="column_2"> <!----LEFT COLUMN---->
+                <img src="./IMG/download.gif" alt="Laptop"> <!-----ADDDDDDDD------->
+            </div>
+
+            <div class="column_1"> <!------RIGHT COLUMN-------->
+                <h1>About</h1>
+                    <p>I am new to Software Development, and have been strongly fascinated with all that is program <br><br>
+                        oriented.How does it all work?! Well sit back and let me take the wheel!<br><br>
+                        I am a graduate of I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s C# Boot Camp <br><br>
+                        and have been trained in HTML, CSS, and Javascript. Along with those structures, <br><br> 
+                        I am continuously learning and absorbing much more. The sky is the limit! <br><br>
+                        Please feel free to <a href="#contact">contact</a> me below!
+                    </p> 
+            </div>
+        </div>
+
+<!---------GITHUB SECTION-------->
+        <div class="row" id="github">
+            <div class="column_1"> <!------LEFT COLUMN------->
+                <h1>Github</h1>
+                    <p style="padding-left: 5cm;">You can view my coding projects on my Github profile here:<br>
+                    <center><a href="https://github.com/El-Borbah34" target="_blank">Pierson's Githubba</a></center> <!-----ADD MY GITHUB HERE------>
+                    </p>
+            </div>
+
+            <div class="column_2"> <!--------RIGHT COLUMN------->
+                <a href="https://github.com/El-Borbah34" target="_blank"><img src="./IMG/obi_github.png" alt="GITHUB"></a> <!-----ADD GITHUB AGAIN AND IMG FOR CLICKABLE LINK------->
+            </div>
+        </div>
+
+<!----------------CONTACT----------------->
+<div id="contact"> 
+    <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+	  <div class="form-popup" id="myForm">
+	    <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+		<h1>Contact</h1>
+			<label for="name"><b>Name</b></label>
+			  <input type="text" placeholder="Type your name here" name="name" required>
+			<label for="phone"><b>Phone</b></label>
+			  <input type="text" placeholder="Enter your phone number here" name="phone">
+			<label for="email"><b>Email</b></label>		
+			  <input type="text" placeholder="Type your email address here" name="email" required>
+			<label for="message"><b>Message</b></label>
+			  <input type="text" placeholder="Type your message here" name="message">
+ 
+    <button type="submit" class="btn">SUBMIT</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+	    </form>
+	  </div>
+  </div>
+
+
+<!----------FOOTER----------->
+        <footer>
+            <p>
+                <center>&copy; Prosper Consulting Inc., <a href="https://learncodinganywhere.com">The Tech Academy</a></center><br>
+            </p>
+        </footer>
+    </body>
+</html>

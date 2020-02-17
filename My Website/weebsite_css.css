@@ -1,0 +1,450 @@
+/*Affects entire document */
+html    {
+    scroll-behavior: smooth;
+}
+
+/*==============BODY=============*/
+body    {
+    margin: 0%; /* This ensures the site displays all the way to the edge of the browser screen*/
+    opacity: 1;/* This and transition affect the page loading fade in effect */
+    transition: 3s opacity; /* This causes a 3 second fade in, you can change this time if you choose */
+    letter-spacing: .2vw;
+    font-family: helvetica;
+    font-size: 1.5vw;
+}
+
+/* This section contributes to the fade effect for the page that occurs when the page is loaded */
+body.fade-out   {
+    opacity: .1;/* This sets the level of opacity at the start of page load */
+    transition: none;
+}
+
+/*=========NAVBAR=========*/
+.navbar {
+    overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+    background-color: black;/* This colors the navbar black */
+	position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+    top: 0; /* This ensures no space is displayed above the navbar */
+    width: 100%; /* This makes the navbar span the entire width of the page */
+    z-index: 1; /*This ensures other elements don't display over the navbar */
+    background: rgba(16, 32, 175, 0.301);
+    position: fixed;
+    animation: moveNav 5s;
+}
+
+/*=======NAVBAR TEXT=============*/
+.navbar a   {
+    float: left; /*This specifies that the text floats on the left on the navbar */
+    display: block; /*This ensures that other text will be displayed on the same line or row, instead of a new line */
+    color: white; /* This is the font color for text on our navbar */
+    padding: .75vw 1 vw; /* This adds padding around our text */
+    margin: 10px;
+    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+    font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
+    font-size: 1.5vw; /* This specifies the font size for text on our navbar */
+    text-align: center; /* This centers the text within its container */
+    position: relative;
+    animation: movenavText 5.75s;
+    letter-spacing: .2vw;
+}
+
+/*the animation effect for moving the nav bar in from above the top of the screen upon page load */
+@keyframes moveNav  {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+/* The animation effect for moving the nav bar in from above the top of the screen upon page load */
+@keyframes movenavText  {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
+@keyframes movevideoText    {
+    from {top: -100vw;}
+    to {top: 0px;}
+}
+
+
+/*=========NAVBAR HOVER EFFECT===========*/
+.navbar a:hover {
+    background-color: #F4F4F4; /*  This defines the background color that will display when you hover over the text on the navbar */
+    color: black; /* This defines the font color that will display when you hover over the text on the navbar */
+    font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+    cursor: pointer;
+    transition-duration: 1s;
+    transform:rotateZ(180deg);
+}
+
+/*============NAVBAR HOME BUTTON===========*/
+
+.navbar a.active    { /* The active selector styles a link */
+    background-color: darkgray;  /* This specifies the background color behind the Home button on the navbar */
+    
+}
+
+/* This causes the video to zoom out from a zoomed in position upon page load */
+@keyframes zoominoutsinglefeatured  {
+    0% {
+        transform: scale(1.5,1.5);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+
+/*=========VIDEO=========*/
+#typing_video   {
+    position: fixed; /* This fixes our video to the page  */
+    left: 0; /* ***changed from right: 0*******This ensures no space between the edge of the video and the edge of the page */
+    top: 0; /* ******changed from bottom: 0*******(((this worked but changed the actual position of the video *displayed more to my liking*)))))This ensures no space between the edge of the video and the edge of the page */
+    min-width: 100%; /* This ensures the video is displayed across the full width of the page */
+    bottom: 0;
+    z-index: -1;
+    animation: zoominoutsinglefeatured 5s;
+}
+
+/*=========TEXT OVER VIDEO=========*/
+.video_text {
+    background: rgba(1, 9, 117, 0.096); /* This provides a semi-transparent background for the text to sit over */
+    color: white; 
+    width: 100%;
+    padding: 20px; /* This adds padding around the text so that the background goes slightly beyond the text */
+    margin-top: 23%;
+    position: relative;
+    -webkit-animation: moveNav 4s;
+    animation: movevideoText 4s;
+}
+
+/*----------------SLIDESHOW STYLING-------------------------*/
+#slideshow_background   {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.mySlides   {
+    display: none;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1;}
+}
+
+/*Slideshow section / container*/
+#slideshow_container {
+    width: 39.5vw;
+    max-width: 400px;
+    max-width: 600px;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+.slide_show_images  {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    width: auto;
+}
+
+.previous, .next    {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+/*positioning the right-hand next button*/
+.next   {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect on slide show buttons */
+.previous:hover, .next:hover    {
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+}
+
+/* Slideshow text */
+.text   {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    background-color: rgba(0, 0, 0, .75);
+    font-weight: bold;
+    border-radius: 7px 7px 7px 7px;
+}
+
+/* number text (1/6, 2/6, etc.) - we have set this display to none, which means these are hidden */
+.slide_number   {
+    color: white;
+    position: absolute;
+    top: 0;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    display: none;
+}
+
+/* the dots under the slideshow */
+.dot    {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover effect for slideshow dots */
+.active, .dot:hover {
+    background-color: black;
+}
+
+/* fading animation for slideshow*/
+.fade   {
+    animation: fade;
+    animation: 1.5s;
+}
+
+
+
+
+/* =======Table========= - this section covers the styling of the columns and rows within our table */
+*   {  /* The asterisk is a universal selector that applies this effect to all elements on the page */
+    box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+}
+
+.column_1   {
+    float: left;
+    width: 50%; /* This ensures one column takes up half the page width */
+    padding: 10px;
+    padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
+    height: 450px; /* This sets the height of our column at 400 pixels - if you change the text within the columns, you will need to adjust the column heights accordingly */
+    background-color: #f2f2f2;
+}
+
+.column_2   {
+    float: left;
+	width: 50%;
+	padding: 10px;
+	padding-top: 1.9%;
+	height: 450px;
+	background-color: #0011ac1f;
+}
+
+.column_3   {
+    float: left;
+	width: 50%;
+	padding: 10px;
+	padding-top: 3.5%;
+	height: 450px;
+	background-color: #0011ac1f;
+}
+
+.row:after  { /* This inserts something after the content of selected elements */
+    content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+    display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+    clear: both; /* This clears any other elements from floating on the left or the right of an element */
+}
+
+/*=======HEADING 1 ELEMENT=============*/
+
+h1  {
+    text-transform: uppercase; /* We are capitalizing our headings */
+    font-family: "Trebuchet MS", Optima;
+    text-align: center;
+    margin-top: 3%; /* We are adding a small margin above the headings */
+    color: #1a1a1a;
+}
+
+/*=========PARAGRAPH ELEMENTS=========*/
+
+p   {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: justify;
+    letter-spacing: 1px; /* This expands the text slightly */
+    font-size: 20px;
+	padding-left: 40px; /*Changed this all around*/
+	padding-right: 10px; /*Changed this all around*/
+}
+
+/*=====CENTER ALIGN ELEMENTS- this embraces all centered text========*/
+center  {
+    font-family: Perpetua, Rockwell Extra Bold;
+	text-align: center;
+	letter-spacing: 1px;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/*=========ANCHOR ELEMENTS===========*/
+a   {
+    color: rgb(231, 129, 12); /* We are ensuring all links are blue */
+}
+
+/*========QUOTATION ELEMENTS=======*/
+q   {
+    font-style: italic;
+	font-weight: bold;
+}
+
+/*==========IMAGE ELEMENTS=========*/
+img {
+    filter: grayscale(75%); /* This rids our pictures of 75% of their color */
+    border-radius: 8px; /* This causes our images to have slightly rounded edges */
+    max-width: 100%; 
+    height: 340px;
+    margin-left: auto; /* This in combination with margin-right: auto centers our images */
+    margin-right: auto;
+    display: block;	/* By specifying block display we can ensure our images are able to be centered */
+}
+
+/*center align element hover effect */
+center:hover    {
+    transition: transform 2s;
+    transform: scale(1.1);
+}
+
+p:hover {
+    color: #00004d;
+    transition: transform 1s;
+    transform: scale(1.01);
+}
+
+/*heading 1 element hover effect*/
+h1:hover    {
+    color: black;
+    font-weight: normal; /* Makes the text no longer bold when hovered over */ 
+}
+
+/* Image element hover effects*/
+img:hover   {
+    filter: grayscale(5%); /* Brings back most of the image's color when hovered over */
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+/*contact form styling*/
+
+/* Makes contact form button slide in from right on page load */
+@keyframes movePopup    {
+    from {right: -40vw;}
+    to {bottom: 1.75vw;}
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.Pop_Up_Button  {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: white;
+    color: black;
+    border: solid;
+    cursor: pointer;
+    position: fixed;
+    animation: movePopup 5s;
+}
+
+/* The popup form - hidden by default*/
+.form-popup {
+    border: 3px solid #f0f1f0;
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+}
+
+/* Form Styling */
+.form-container {
+    max-width: 49vw;
+    padding: 9px;
+    background-color: white;
+}
+
+/*input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: gainsboro;
+    font-family: helvetica;
+    font-size: 1vw;
+}
+
+/*Submit button*/
+.form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+}
+
+/*Close Button*/
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+
+/* Button styling */
+button  {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw 1.5vw;
+    border-style: solid;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+/*Hover effect for buttons*/
+button:hover, .form-container .btn:hover{
+    color: white;
+    background-color: black;
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: silver;
+}
+
+.form-container .cancel:hover{
+    color: white;
+    background-color: darkred;
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: black;
+}
+
+
+/*=======FOOTER=======*/
+footer  {
+    padding: 2%;
+    background-color: white;
+}
